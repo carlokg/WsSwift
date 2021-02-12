@@ -11,30 +11,30 @@ struct ordenador{
 }
 
 class Ram{
-    var capacidad : Int?
-    var fabricante : String?
-    var rgb : Bool?
+    var capacidad : Int!
+    var fabricante : String!
+    var rgb : Bool!
     
 }
 
 class Procesador{
-    var vel : Int?
-    var nCores: Int?
-    var nHilos : Int?
-    var fabricante : String?
+    var vel : Int!
+    var nCores: Int!
+    var nHilos : Int!
+    var fabricante : String!
 }
 
 class UnidadAlmacenamiento{
-    var capacidad : Int?
-    var fabricante : String?
-    var tipoUnidad : String?
+    var capacidad : Int!
+    var fabricante : String!
+    var tipoUnidad : String!
 }
 
 class tarjetaGrafica{
-    var ram : Int?
-    var consumo : Int?
-    var cores : Int?
-    var velocidad : Int?
+    var ram : Int!
+    var consumo : Int!
+    var cores : Int!
+    var velocidad : Int!
 }
 
 let ram1 = Ram()
@@ -69,7 +69,9 @@ g1.velocidad = 100
 g1.ram = 4
 g1.cores = 2
 
-let o1 = ordenador.init(precio: 1500, nombre: "Lenovo", ram: [ram1, ram2], proc: p1, uA: [u1, u2], grafica: g1)
+var o1 = ordenador.init(precio: 1500, nombre: "Lenovo", ram: [ram1, ram2], proc: p1, uA: [u1, u2], grafica: g1)
+
+print(o1.grafica.ram)
 
 //print(o1)
 dump(o1)
