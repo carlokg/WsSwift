@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id="n1" placeholder="Introduce el num 1" style="background-color: mediumturquoise";>
+<br>
+<input type="text" id="n2" placeholder="Introduce el num 2" style="background-color: mediumturquoise";>
+<br>
+<br>
+<button id="sumar" onclick="sumar()">+</button>
+<button id="restar" onclick="restar()">-</button>
+<button id="multiplicar" onclick="multiplicar()">*</button>
+<button id="dividir" onclick="dividir()">/</button>
+<button id="raiz" onclick="raiz()">√</button>
+<br>
+<br>
+<output id="res" style="color:red;"></output> 
+
+<script type="text/javascript">
+
+    function sumar(){
+
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+
+        if (num1 == "" || num2 == ""){
+            document.getElementById("res").innerHTML = "No puedes estar vacíos los campos"
+        }else if (isNaN(num1) || isNaN(num2)){
+            document.getElementById("res").innerHTML = "Los campos no son numéricos"
+        }else{
+            var resultado = parseInt(num1)  + parseInt(num2)
+
+        document.getElementById("res").innerHTML = "Resultado: " + resultado
+            
+        }
+        
+    }
+
+    function restar(){
+        
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+
+        if (num1 == "" || num2 == ""){
+            document.getElementById("res").innerHTML = "No puedes estar vacíos los campos"
+        }else if (isNaN(num1) || isNaN(num2)){
+            document.getElementById("res").innerHTML = "Los campos no son numéricos"
+        }else{
+            var resultado = parseInt(num1) - parseInt(num2) ;
+
+        document.getElementById("res").innerHTML = "Resultado: " + resultado
+
+        }
+    }
+
+    function multiplicar(){
+        
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+
+        if (num1 == "" || num2 == ""){
+            document.getElementById("res").innerHTML = "No puedes estar vacíos los campos"
+
+        }else if (isNaN(num1) || isNaN(num2)){
+
+            document.getElementById("res").innerHTML = "Los campos no son numéricos"
+        }else{
+
+            var resultado = parseInt(num1)  * parseInt(num2) ;
+
+        document.getElementById("res").innerHTML = "Resultado: " + resultado
+
+        }
+    }
+
+    function dividir(){
+        
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+
+        if (num1 == "" || num2 == ""){
+            document.getElementById("res").innerHTML = "No puedes estar vacíos los campos"
+
+        }else if (isNaN(num1) || isNaN(num2)){
+
+            document.getElementById("res").innerHTML = "Los campos no son numéricos"
+        }else{
+
+            var resultado = parseInt(num1) / parseInt(num2) ;
+
+        document.getElementById("res").innerHTML = "Resultado: " + resultado
+
+        }
+    }
+
+    function raiz(){
+
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+
+        if (num1 == ""){
+            document.getElementById("res").innerHTML = "Introdizca el número en el primer campo"
+        }else if (isNaN(num1)){
+            document.getElementById("res").innerHTML = "Los campos no son numéricos"
+        }else{
+            var resultado = Math.sqrt(num1);
+
+        document.getElementById("res").innerHTML = "Resultado: " + resultado
+            
+        }
+        
+    }
+
+    
+
+</script>
+</body>
+</html>
